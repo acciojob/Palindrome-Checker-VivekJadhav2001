@@ -1,6 +1,9 @@
 // complete the given function
 
 function palindrome(str){
-return (str == str.split("").reverse().join("")) ? true : false
+let cleaned = str.replace(/[^a-z0-9]/gi, "").toLowerCase();
+
+  // check palindrome
+  return cleaned === cleaned.split("").reverse().join("");
 }
 module.exports = palindrome
